@@ -2,9 +2,8 @@
 #include "input.h"
 
 int main(void) {
-  char arr[2] = {'a', 'b'};
 
-  printf("%c\n", get_input_key(arr, 2));
+  printf("%d\n", title());
 
   return 0;
 }
