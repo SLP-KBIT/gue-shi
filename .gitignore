@@ -103,3 +103,5 @@ flycheck_*.el
 
 # projectiles files
 .projectile
+
+gue
