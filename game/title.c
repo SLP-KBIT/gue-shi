@@ -17,7 +17,7 @@ int title(void) {
   while ( input == INPUT_ERR ) {
     printf("Please Input 1, 2 or 9\n");
     printf("> ");
-    input = get_input_key(input_chars, 2);
+    input = get_input_key(input_chars, TITLE_SELECTION_NUM);
   }
 
   return input - '0';
