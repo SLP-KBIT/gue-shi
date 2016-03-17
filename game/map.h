@@ -6,7 +6,7 @@
 #define MAP_WIDTH 10
 #define MAP_HEIGHT 5
 #define MAP_FLOOR 1
-#define MOVE_DIR_NUM 4
+#define MOVE_INPUT_NUM 5
 #define ARROW_UP 'k'
 #define ARROW_DOWN 'j'
 #define ARROW_LEFT 'h'

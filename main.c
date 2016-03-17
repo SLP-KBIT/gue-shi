@@ -18,10 +18,12 @@ int main(void) {
 
   input = title();
 
-  if ( input == TITLE_EXIT ) { puts("See You Again!"); return 0; }
-  puts("");
+  if ( input != TITLE_EXIT ) {
+    puts("");
+    play_game(player);
+  }
 
-  play_game(player);
+  puts("See You Again!\n");
 
   return 0;
 }
