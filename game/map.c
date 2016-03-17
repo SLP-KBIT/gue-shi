@@ -62,12 +62,12 @@ void show_prompt(void) {
 }
 
 bool player_move(Player *player) {
-  char input_chars[MOVE_DIR_NUM] = { ARROW_UP, ARROW_DOWN, ARROW_LEFT, ARROW_RIGHT };
+  char input_chars[MOVE_INPUT_NUM] = { ARROW_UP, ARROW_DOWN, ARROW_LEFT, ARROW_RIGHT, GAME_EXIT };
   char input;
   Point dir = { 0, 0 };
   int f = player->pos.floor, h = player->pos.height, w = player->pos.width;
 
-  input = get_input_key(input_chars, MOVE_DIR_NUM);
+  input = get_input_key(input_chars, MOVE_INPUT_NUM);
 
   switch ( input ) {
   case ARROW_UP: dir.height = -1; break;
