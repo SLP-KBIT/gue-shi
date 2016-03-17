@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "input.h"
+#include "sys/input.h"
+#include "game/title.h"
 
 int main(void) {
 

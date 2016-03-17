@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "input.h"
+#include "sys/input.h"
 
 char get_input_key(char arr[], int len) {
   char c = ' ';
