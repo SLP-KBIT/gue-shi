@@ -1,12 +1,37 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "sys/input.h"
 #include "game/title.h"
 #include "game/map.h"
+#include "game/character.h"
+
+void play_game(Player player);
 
 int main(void) {
-  Point player_p = get_floor_start(0);
+  Player player;
+  int input;
 
-  printf("%d\n", title());
-  show_map(player_p);
+  player.status.hp = 10;
+  player.status.mp = 10;
+  player.status.money = 1000;
+  player.pos = get_floor_start(0);
+
+  input = title();
+
+  if ( input == TITLE_EXIT ) { puts("See You Again!"); return 0; }
+  puts("");
+
+  play_game(player);
+
   return 0;
+}
+
+void play_game(Player player) {
+  Arrow dir;
+
+  while ( 1 ) {
+    show_map(player.pos);
+    show_prompt();
+    if ( player_move(&player) == false ) { break; };
+  }
 }
