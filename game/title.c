@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include "input.h"
-#include "title.h"
+#include "sys/input.h"
+#include "game/title.h"
 
 int title(void) {
   char input_chars[TITLE_SELECTION_NUM] = {'0' + TITLE_NEW_GAME, '0' + TITLE_CONTINUE, '0' + TITLE_EXIT};
